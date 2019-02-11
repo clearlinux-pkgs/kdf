@@ -64,7 +64,7 @@ libkdfprivate.so.18:_ZN9DiskEntry17deviceNameChangedEv
 libkdfprivate.so.18:_ZN9DiskEntry17mountPointChangedEv
 libkdfprivate.so.18:_ZN9DiskEntry19mountOptionsChangedEv
 libkdfprivate.so.18:_ZN9DiskEntry20receivedSysStdErrOutEv
-libkdfprivate.so.18:_ZN9DiskEntry4initEPKc
+libkdfprivate.so.18:_ZN9DiskEntry4initERK7QString
 libkdfprivate.so.18:_ZN9DiskEntry5mountEv
 libkdfprivate.so.18:_ZN9DiskEntry6umountEv
 libkdfprivate.so.18:_ZN9DiskEntry7remountEv
@@ -73,10 +73,10 @@ libkdfprivate.so.18:_ZN9DiskEntry8iconNameEv
 libkdfprivate.so.18:_ZN9DiskEntry9setFsTypeERK7QString
 libkdfprivate.so.18:_ZN9DiskEntry9setKBSizeEy
 libkdfprivate.so.18:_ZN9DiskEntry9setKBUsedEy
-libkdfprivate.so.18:_ZN9DiskEntryC1EP7QObjectPKc
-libkdfprivate.so.18:_ZN9DiskEntryC1ERK7QStringP7QObjectPKc
-libkdfprivate.so.18:_ZN9DiskEntryC2EP7QObjectPKc
-libkdfprivate.so.18:_ZN9DiskEntryC2ERK7QStringP7QObjectPKc
+libkdfprivate.so.18:_ZN9DiskEntryC1EP7QObjectRK7QString
+libkdfprivate.so.18:_ZN9DiskEntryC1ERK7QStringP7QObjectS2_
+libkdfprivate.so.18:_ZN9DiskEntryC2EP7QObjectRK7QString
+libkdfprivate.so.18:_ZN9DiskEntryC2ERK7QStringP7QObjectS2_
 libkdfprivate.so.18:_ZN9DiskEntryD0Ev
 libkdfprivate.so.18:_ZN9DiskEntryD1Ev
 libkdfprivate.so.18:_ZN9DiskEntryD2Ev
