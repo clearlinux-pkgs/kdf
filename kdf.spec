@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xDBD2CE893E2D1C87 (cfeck@kde.org)
 #
 Name     : kdf
-Version  : 18.12.3
-Release  : 5
-URL      : https://download.kde.org/stable/applications/18.12.3/src/kdf-18.12.3.tar.xz
-Source0  : https://download.kde.org/stable/applications/18.12.3/src/kdf-18.12.3.tar.xz
-Source99 : https://download.kde.org/stable/applications/18.12.3/src/kdf-18.12.3.tar.xz.sig
+Version  : 19.04.0
+Release  : 6
+URL      : https://download.kde.org/stable/applications/19.04.0/src/kdf-19.04.0.tar.xz
+Source0  : https://download.kde.org/stable/applications/19.04.0/src/kdf-19.04.0.tar.xz
+Source99 : https://download.kde.org/stable/applications/19.04.0/src/kdf-19.04.0.tar.xz.sig
 Summary  : View Disk Usage
 Group    : Development/Tools
 License  : GPL-2.0
@@ -77,14 +77,14 @@ locales components for the kdf package.
 
 
 %prep
-%setup -q -n kdf-18.12.3
+%setup -q -n kdf-19.04.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1555329448
+export SOURCE_DATE_EPOCH=1555610098
 mkdir -p clr-build
 pushd clr-build
 %cmake ..
@@ -92,7 +92,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1555329448
+export SOURCE_DATE_EPOCH=1555610098
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kdf
 cp COPYING %{buildroot}/usr/share/package-licenses/kdf/COPYING
@@ -139,7 +139,6 @@ popd
 /usr/share/doc/HTML/ca/kcontrol/blockdevices/index.docbook
 /usr/share/doc/HTML/ca/kdf/index.cache.bz2
 /usr/share/doc/HTML/ca/kdf/index.docbook
-/usr/share/doc/HTML/ca/kdf/kdf_config.png
 /usr/share/doc/HTML/de/kcontrol/blockdevices/index.cache.bz2
 /usr/share/doc/HTML/de/kcontrol/blockdevices/index.docbook
 /usr/share/doc/HTML/de/kdf/index.cache.bz2
@@ -209,8 +208,8 @@ popd
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib64/libkdfprivate.so.18
-/usr/lib64/libkdfprivate.so.18.12.3
+/usr/lib64/libkdfprivate.so.19
+/usr/lib64/libkdfprivate.so.19.04.0
 /usr/lib64/qt5/plugins/libkcm_kdf.so
 
 %files license
