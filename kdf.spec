@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xDBD2CE893E2D1C87 (cfeck@kde.org)
 #
 Name     : kdf
-Version  : 20.04.2
-Release  : 21
-URL      : https://download.kde.org/stable/release-service/20.04.2/src/kdf-20.04.2.tar.xz
-Source0  : https://download.kde.org/stable/release-service/20.04.2/src/kdf-20.04.2.tar.xz
-Source1  : https://download.kde.org/stable/release-service/20.04.2/src/kdf-20.04.2.tar.xz.sig
+Version  : 20.08.0
+Release  : 22
+URL      : https://download.kde.org/stable/release-service/20.08.0/src/kdf-20.08.0.tar.xz
+Source0  : https://download.kde.org/stable/release-service/20.08.0/src/kdf-20.08.0.tar.xz
+Source1  : https://download.kde.org/stable/release-service/20.08.0/src/kdf-20.08.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-2.0
@@ -78,15 +78,15 @@ locales components for the kdf package.
 
 
 %prep
-%setup -q -n kdf-20.04.2
-cd %{_builddir}/kdf-20.04.2
+%setup -q -n kdf-20.08.0
+cd %{_builddir}/kdf-20.08.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1591904580
+export SOURCE_DATE_EPOCH=1597780680
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -98,14 +98,14 @@ export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %cmake ..
-make  %{?_smp_mflags}  VERBOSE=1
+make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1591904580
+export SOURCE_DATE_EPOCH=1597780680
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kdf
-cp %{_builddir}/kdf-20.04.2/COPYING %{buildroot}/usr/share/package-licenses/kdf/7c203dee3a03037da436df03c4b25b659c073976
+cp %{_builddir}/kdf-20.08.0/COPYING %{buildroot}/usr/share/package-licenses/kdf/7c203dee3a03037da436df03c4b25b659c073976
 pushd clr-build
 %make_install
 popd
@@ -177,6 +177,8 @@ popd
 /usr/share/doc/HTML/it/kcontrol/blockdevices/index.docbook
 /usr/share/doc/HTML/it/kdf/index.cache.bz2
 /usr/share/doc/HTML/it/kdf/index.docbook
+/usr/share/doc/HTML/ko/kcontrol/blockdevices/index.cache.bz2
+/usr/share/doc/HTML/ko/kcontrol/blockdevices/index.docbook
 /usr/share/doc/HTML/nl/kcontrol/blockdevices/index.cache.bz2
 /usr/share/doc/HTML/nl/kcontrol/blockdevices/index.docbook
 /usr/share/doc/HTML/nl/kdf/index.cache.bz2
@@ -217,7 +219,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libkdfprivate.so.20
-/usr/lib64/libkdfprivate.so.20.04.2
+/usr/lib64/libkdfprivate.so.20.08.0
 /usr/lib64/qt5/plugins/libkcm_kdf.so
 
 %files license
