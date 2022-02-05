@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xBB463350D6EF31EF (heiko@shruuf.de)
 #
 Name     : kdf
-Version  : 21.12.1
-Release  : 35
-URL      : https://download.kde.org/stable/release-service/21.12.1/src/kdf-21.12.1.tar.xz
-Source0  : https://download.kde.org/stable/release-service/21.12.1/src/kdf-21.12.1.tar.xz
-Source1  : https://download.kde.org/stable/release-service/21.12.1/src/kdf-21.12.1.tar.xz.sig
+Version  : 21.12.2
+Release  : 36
+URL      : https://download.kde.org/stable/release-service/21.12.2/src/kdf-21.12.2.tar.xz
+Source0  : https://download.kde.org/stable/release-service/21.12.2/src/kdf-21.12.2.tar.xz
+Source1  : https://download.kde.org/stable/release-service/21.12.2/src/kdf-21.12.2.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : CC0-1.0 GPL-2.0
@@ -78,15 +78,15 @@ locales components for the kdf package.
 
 
 %prep
-%setup -q -n kdf-21.12.1
-cd %{_builddir}/kdf-21.12.1
+%setup -q -n kdf-21.12.2
+cd %{_builddir}/kdf-21.12.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641964778
+export SOURCE_DATE_EPOCH=1644022886
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -102,11 +102,11 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1641964778
+export SOURCE_DATE_EPOCH=1644022886
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kdf
-cp %{_builddir}/kdf-21.12.1/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/kdf/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0
-cp %{_builddir}/kdf-21.12.1/LICENSES/GPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/kdf/3e8971c6c5f16674958913a94a36b1ea7a00ac46
+cp %{_builddir}/kdf-21.12.2/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/kdf/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0
+cp %{_builddir}/kdf-21.12.2/LICENSES/GPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/kdf/3e8971c6c5f16674958913a94a36b1ea7a00ac46
 pushd clr-build
 %make_install
 popd
@@ -220,7 +220,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libkdfprivate.so.21
-/usr/lib64/libkdfprivate.so.21.12.1
+/usr/lib64/libkdfprivate.so.21.12.2
 /usr/lib64/qt5/plugins/libkcm_kdf.so
 
 %files license
