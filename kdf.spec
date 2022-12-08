@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xBB463350D6EF31EF (heiko@shruuf.de)
 #
 Name     : kdf
-Version  : 22.08.3
-Release  : 45
-URL      : https://download.kde.org/stable/release-service/22.08.3/src/kdf-22.08.3.tar.xz
-Source0  : https://download.kde.org/stable/release-service/22.08.3/src/kdf-22.08.3.tar.xz
-Source1  : https://download.kde.org/stable/release-service/22.08.3/src/kdf-22.08.3.tar.xz.sig
+Version  : 22.12.0
+Release  : 46
+URL      : https://download.kde.org/stable/release-service/22.12.0/src/kdf-22.12.0.tar.xz
+Source0  : https://download.kde.org/stable/release-service/22.12.0/src/kdf-22.12.0.tar.xz
+Source1  : https://download.kde.org/stable/release-service/22.12.0/src/kdf-22.12.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : CC0-1.0 GPL-2.0
@@ -79,15 +79,15 @@ locales components for the kdf package.
 
 
 %prep
-%setup -q -n kdf-22.08.3
-cd %{_builddir}/kdf-22.08.3
+%setup -q -n kdf-22.12.0
+cd %{_builddir}/kdf-22.12.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1667883803
+export SOURCE_DATE_EPOCH=1670539546
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -103,7 +103,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1667883803
+export SOURCE_DATE_EPOCH=1670539546
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kdf
 cp %{_builddir}/kdf-%{version}/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/kdf/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0 || :
@@ -169,6 +169,8 @@ popd
 /usr/share/doc/HTML/es/kdf/index.docbook
 /usr/share/doc/HTML/et/kdf/index.cache.bz2
 /usr/share/doc/HTML/et/kdf/index.docbook
+/usr/share/doc/HTML/fr/kcontrol/blockdevices/index.cache.bz2
+/usr/share/doc/HTML/fr/kcontrol/blockdevices/index.docbook
 /usr/share/doc/HTML/fr/kdf/index.cache.bz2
 /usr/share/doc/HTML/fr/kdf/index.docbook
 /usr/share/doc/HTML/fr/kdf/kdf.png
@@ -205,6 +207,10 @@ popd
 /usr/share/doc/HTML/sr/kcontrol/blockdevices/index.docbook
 /usr/share/doc/HTML/sr/kdf/index.cache.bz2
 /usr/share/doc/HTML/sr/kdf/index.docbook
+/usr/share/doc/HTML/sr@latin/kcontrol/blockdevices/index.cache.bz2
+/usr/share/doc/HTML/sr@latin/kcontrol/blockdevices/index.docbook
+/usr/share/doc/HTML/sr@latin/kdf/index.cache.bz2
+/usr/share/doc/HTML/sr@latin/kdf/index.docbook
 /usr/share/doc/HTML/sv/kcontrol/blockdevices/index.cache.bz2
 /usr/share/doc/HTML/sv/kcontrol/blockdevices/index.docbook
 /usr/share/doc/HTML/sv/kdf/index.cache.bz2
@@ -221,7 +227,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libkdfprivate.so.22
-/usr/lib64/libkdfprivate.so.22.08.3
+/usr/lib64/libkdfprivate.so.22.12.0
 /usr/lib64/qt5/plugins/libkcm_kdf.so
 
 %files license
