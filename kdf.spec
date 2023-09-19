@@ -6,11 +6,11 @@
 # Source0 file verified with key 0xBB463350D6EF31EF (heiko@shruuf.de)
 #
 Name     : kdf
-Version  : 23.08.0
-Release  : 56
-URL      : https://download.kde.org/stable/release-service/23.08.0/src/kdf-23.08.0.tar.xz
-Source0  : https://download.kde.org/stable/release-service/23.08.0/src/kdf-23.08.0.tar.xz
-Source1  : https://download.kde.org/stable/release-service/23.08.0/src/kdf-23.08.0.tar.xz.sig
+Version  : 23.08.1
+Release  : 57
+URL      : https://download.kde.org/stable/release-service/23.08.1/src/kdf-23.08.1.tar.xz
+Source0  : https://download.kde.org/stable/release-service/23.08.1/src/kdf-23.08.1.tar.xz
+Source1  : https://download.kde.org/stable/release-service/23.08.1/src/kdf-23.08.1.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : CC0-1.0 GPL-2.0
@@ -83,15 +83,15 @@ locales components for the kdf package.
 
 
 %prep
-%setup -q -n kdf-23.08.0
-cd %{_builddir}/kdf-23.08.0
+%setup -q -n kdf-23.08.1
+cd %{_builddir}/kdf-23.08.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1693064655
+export SOURCE_DATE_EPOCH=1695090209
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -124,7 +124,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1693064655
+export SOURCE_DATE_EPOCH=1695090209
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kdf
 cp %{_builddir}/kdf-%{version}/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/kdf/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0 || :
@@ -246,6 +246,8 @@ popd
 /usr/share/doc/HTML/sv/kdf/kdf_config.png
 /usr/share/doc/HTML/tr/kcontrol/blockdevices/index.cache.bz2
 /usr/share/doc/HTML/tr/kcontrol/blockdevices/index.docbook
+/usr/share/doc/HTML/tr/kdf/index.cache.bz2
+/usr/share/doc/HTML/tr/kdf/index.docbook
 /usr/share/doc/HTML/uk/kcontrol/blockdevices/index.cache.bz2
 /usr/share/doc/HTML/uk/kcontrol/blockdevices/index.docbook
 /usr/share/doc/HTML/uk/kdf/index.cache.bz2
@@ -255,10 +257,10 @@ popd
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libkdfprivate.so.23.08.0
+/V3/usr/lib64/libkdfprivate.so.23.08.1
 /V3/usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_kdf.so
 /usr/lib64/libkdfprivate.so.23
-/usr/lib64/libkdfprivate.so.23.08.0
+/usr/lib64/libkdfprivate.so.23.08.1
 /usr/lib64/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_kdf.so
 
 %files license
